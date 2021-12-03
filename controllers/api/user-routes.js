@@ -117,10 +117,12 @@ router.post('/login', (req, res) => {
     req.session.destroy(() => {
       res.status(204).end();
     });
-  } else {
+  }
+  else {
     res.status(404).end();
   }
 });
+
 
 // PUT /api/users/1
 router.put('/:id', (req, res) => {
